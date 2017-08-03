@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyCmsWEB(1)", "MyCmsWEB\", "{3A7123DB-C2FF-43A5-B4AD-23AC38F29053}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4899"
+		Debug.AspNetCompiler.PhysicalPath = "MyCmsWEB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4899\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4899"
+		Release.AspNetCompiler.PhysicalPath = "MyCmsWEB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4899\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4899"
+		SlnRelativePath = "MyCmsWEB\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCms_Model", "MyCms_Model\MyCms_Model.csproj", "{BF1E3D75-048B-45FE-BC84-2CD6C1C883E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zlib", "ZLib\Zlib.csproj", "{5762BFB7-503D-4090-95C9-2C58EC2FDCD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCms_BLL", "MyCms_BLL\MyCms_BLL.csproj", "{BF159321-9D20-42DC-B720-89A02EFE6B67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCms_DAL", "MyCms_DAL\MyCms_DAL.csproj", "{03013D03-5B4E-4CA1-984A-5BF74176FBF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysBase", "SysBase\SysBase.csproj", "{67FB3F95-2EEE-4CC4-BD4C-9E70876B63DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A7123DB-C2FF-43A5-B4AD-23AC38F29053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7123DB-C2FF-43A5-B4AD-23AC38F29053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7123DB-C2FF-43A5-B4AD-23AC38F29053}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7123DB-C2FF-43A5-B4AD-23AC38F29053}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BF1E3D75-048B-45FE-BC84-2CD6C1C883E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1E3D75-048B-45FE-BC84-2CD6C1C883E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1E3D75-048B-45FE-BC84-2CD6C1C883E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1E3D75-048B-45FE-BC84-2CD6C1C883E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5762BFB7-503D-4090-95C9-2C58EC2FDCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5762BFB7-503D-4090-95C9-2C58EC2FDCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5762BFB7-503D-4090-95C9-2C58EC2FDCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5762BFB7-503D-4090-95C9-2C58EC2FDCD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF159321-9D20-42DC-B720-89A02EFE6B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF159321-9D20-42DC-B720-89A02EFE6B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF159321-9D20-42DC-B720-89A02EFE6B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF159321-9D20-42DC-B720-89A02EFE6B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03013D03-5B4E-4CA1-984A-5BF74176FBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03013D03-5B4E-4CA1-984A-5BF74176FBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03013D03-5B4E-4CA1-984A-5BF74176FBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03013D03-5B4E-4CA1-984A-5BF74176FBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FB3F95-2EEE-4CC4-BD4C-9E70876B63DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FB3F95-2EEE-4CC4-BD4C-9E70876B63DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FB3F95-2EEE-4CC4-BD4C-9E70876B63DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FB3F95-2EEE-4CC4-BD4C-9E70876B63DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
