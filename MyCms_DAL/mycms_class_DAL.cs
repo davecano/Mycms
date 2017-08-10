@@ -42,6 +42,13 @@ namespace MyCms_DAL
         {
             return db.GetEntityById<mycms_class>(classID);
         }
-
+        public int GetMaxID()
+        {
+            string ret = db.ExecuteScalar("select max(Id) from mycms_class").ToString();
+            if (ret == "")
+                return 0;
+            else
+                return int.Parse(ret);
+        }
     }
 }

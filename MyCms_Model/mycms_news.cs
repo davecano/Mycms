@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Z;
 
 namespace MyCms_Model
 {
     /// <summary>
     /// mycms_news:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
+     [Table(TableName = "mycms_news", PrimaryKeys = "Id")]
     [Serializable]
 	public partial class mycms_news
 	{
@@ -16,17 +18,20 @@ namespace MyCms_Model
 		{}
 		#region Model
 		private int _id;
-		private int _classid;
+        private int _istop;
+        private int _classid;
+        private string _classname;
 		private string _title;
 		private string _author;
 		private DateTime? _addtime;
 		private string _summary;
 		private int _isimg;
 		private string _content;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int Id
+        /// <summary>
+        /// 
+        /// </summary>
+        [ColumnAttribute(PrimaryKey = true)]
+        public int Id
 		{
 			set{ _id=value;}
 			get{return _id;}
@@ -39,10 +44,20 @@ namespace MyCms_Model
 			set{ _classid=value;}
 			get{return _classid;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string Title
+        public int Istop
+        {
+            set { _istop = value; }
+            get { return _istop; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+       public string Classname
+		{
+			set{ _classname=value;}
+             get{return _classname;}
+		}
+        public string Title
 		{
 			set{ _title=value;}
 			get{return _title;}

@@ -36,16 +36,19 @@ namespace MyCms_BLL
         /// </summary>
         /// <param name="q"></param>
         /// <returns></returns>
-        public IList<mycms_pic> GetNewsList(Query q)
+        public IList<mycms_pic> GetPicList(Query q)
         {
-            return mpd.GetNewsList(q);
+            return mpd.GetPicsList(q);
         }
 
         public mycms_pic GetPicByID(int picid)
         {
-            return mpd.GetPicById()ById(picid);
+            return mpd.GetPicById(picid);
         }
-
+        public int GetMaxID()
+        {
+            return mpd.GetMaxID();
+        }
 
     }
 }

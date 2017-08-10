@@ -49,3 +49,29 @@ Iwidth int ,
 Iheight int,
 NewsId int
 )
+create table mycms_menu(
+Menuid int primary key,
+MenuName nvarchar(50) not null,
+ParentMenu int not null
+)
+CREATE TABLE [dbo].[SysUser] (
+    [UserID]        VARCHAR (255) NOT NULL,
+    [UserLoginName] VARCHAR (500) NULL,
+    [UserName]      VARCHAR (255) NULL,
+    [UserPassword]  VARCHAR (255) NULL,
+    [IsMain]        BIT           NULL,
+    [OrgID]         NVARCHAR (50) NULL,
+    [LastTime]      DATETIME      NULL,
+    [LastIP]        VARCHAR (255) NULL,
+    [IsUse]         BIT           NULL,
+    [Sex]           VARCHAR (255) NULL,
+    [Phone]         VARCHAR (255) NULL,
+    [PeopleCode]    VARCHAR (255) NULL,
+    [Tel]           VARCHAR (255) NULL,
+    [Email]         VARCHAR (255) NULL,
+    [RegDate]       DATETIME      NULL,
+    [OrgName]       VARCHAR (255) NULL,
+    [UserStatus]    VARCHAR (255) NULL,
+    [UserType]      NVARCHAR (50) NULL,
+    CONSTRAINT [PK_SYSUSER] PRIMARY KEY CLUSTERED ([UserID] ASC)
+);

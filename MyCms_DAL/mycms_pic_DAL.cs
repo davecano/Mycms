@@ -16,7 +16,7 @@ namespace MyCms_DAL
         DbHelper db = new DbHelper();
         #region 查看所有模板
 
-        public IList<mycms_pic> GetNewsList(Query q)
+        public IList<mycms_pic> GetPicsList(Query q)
         {
             return db.Query<mycms_pic>(q, 1, 1000);
         }
@@ -42,6 +42,13 @@ namespace MyCms_DAL
         {
             return db.GetEntityById<mycms_pic>(picID);
         }
-
+        public int GetMaxID()
+        {
+            string ret = db.ExecuteScalar("select max(Id) from mycms_pic").ToString();
+            if (ret == "")
+                return 0;
+            else
+                return int.Parse(ret);
+        }
     }
 }

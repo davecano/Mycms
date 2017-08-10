@@ -70,7 +70,47 @@
       <Name>Zlib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\ECIS.Model.dll" />
+    <Content Include="bin\Debug\ECIS.Model.pdb" />
+    <Content Include="bin\Debug\Excel.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.Net35.dll" />
+    <Content Include="bin\Debug\office.dll" />
+    <Content Include="bin\Debug\stdole.dll" />
+    <Content Include="bin\Debug\SysBase.dll" />
+    <Content Include="bin\Debug\SysBase.pdb" />
+    <Content Include="bin\Debug\TSOA.Model.dll" />
+    <Content Include="bin\Debug\TSOA.Model.pdb" />
+    <Content Include="bin\Debug\ZLib.dll" />
+    <Content Include="bin\Debug\ZLib.pdb" />
+    <Content Include="bin\Debug\ZLib.xml" />
+    <Content Include="bin\Release\Excel.dll" />
+    <Content Include="bin\Release\log4net.dll" />
+    <Content Include="bin\Release\log4net.xml" />
+    <Content Include="bin\Release\Newtonsoft.Json.Net35.dll" />
+    <Content Include="bin\Release\SysBase.dll" />
+    <Content Include="bin\Release\SysBase.pdb" />
+    <Content Include="bin\Release\ZLib.dll" />
+    <Content Include="bin\Release\ZLib.pdb" />
+    <Content Include="obj\Debug\SysBase.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SysBase.dll" />
+    <Content Include="obj\Debug\SysBase.pdb" />
+    <Content Include="obj\Release\SysBase.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\SysBase.dll" />
+    <Content Include="obj\Release\SysBase.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SysBase.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\SysBase.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

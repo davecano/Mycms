@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Z;
+
 
 namespace MyCms_Model
 {
     /// <summary>
     /// mycms_class:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
-    [Serializable]
-	public partial class mycms_class
+ 
+    [Table(TableName = "mycms_class", PrimaryKeys = "Id")]
+  
+    public class mycms_class
 	{
-		public mycms_class()
+       
+        public mycms_class()
 		{}
 		#region Model
 		private int _id;
 		private string _classname;
 		private int? _parentid;
 		private int? _sortrank;
-		private int _isonnav;
-		private int _isonindex;
-		private int _isforbidden;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int Id
+		private bool? _isonnav;
+		private bool? _isonindex;
+		private bool? _isforbidden;
+        /// <summary>
+        /// 
+        /// </summary>  
+         [ColumnAttribute(PrimaryKey = true)]
+        public int Id
 		{
 			set{ _id=value;}
 			get{return _id;}
@@ -57,7 +63,7 @@ namespace MyCms_Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int IsOnNav
+		public bool? IsOnNav
 		{
 			set{ _isonnav=value;}
 			get{return _isonnav;}
@@ -65,7 +71,7 @@ namespace MyCms_Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int IsOnIndex
+		public bool? IsOnIndex
 		{
 			set{ _isonindex=value;}
 			get{return _isonindex;}
@@ -73,7 +79,7 @@ namespace MyCms_Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int IsForbidden
+		public bool? IsForbidden
 		{
 			set{ _isforbidden=value;}
 			get{return _isforbidden;}

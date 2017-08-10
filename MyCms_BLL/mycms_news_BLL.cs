@@ -37,16 +37,19 @@ namespace MyCms_BLL
         /// </summary>
         /// <param name="q"></param>
         /// <returns></returns>
-        public IList<mycms_news> GetNewsList(Query q)
+        public IList<mycms_news> GetNewsList(Query q, int pageindex, int pagesize, out int totalcount)
         {
-            return mnd.GetNewsList(q);
+            return mnd.GetNewsList(q, pageindex, pagesize, out totalcount);
         }
 
         public mycms_news GetNewsByID(int newsid)
         {
             return mnd.GetNewsById(newsid);
         }
-
+        public int GetMaxID()
+        {
+            return mnd.GetMaxID();
+        }
 
     }
 

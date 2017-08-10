@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="mycms_class_BLL.cs" />
+    <Compile Include="mycms_menu_BLL .cs" />
     <Compile Include="mycms_news_BLL.cs" />
     <Compile Include="mycms_pic_BLL.cs" />
     <Compile Include="mycms_temptates_BLL.cs" />

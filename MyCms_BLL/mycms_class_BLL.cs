@@ -20,7 +20,7 @@ namespace MyCms_BLL
 
         public int Delete(mycms_class m)
         {
-            return mcd.Insert(m);
+            return mcd.Delete(m);
         }
 
         public int Update(mycms_class m)
@@ -36,6 +36,10 @@ namespace MyCms_BLL
         public mycms_class GetClassById(int classID)
         {
             return mcd.GetClassById(classID);
+        }
+        public int GetMaxID()
+        {
+            return mcd.GetMaxID();
         }
     }
    

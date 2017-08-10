@@ -42,12 +42,19 @@
   <ItemGroup>
     <Compile Include="EnumHelper.cs" />
     <Compile Include="mycms_class.cs" />
+    <Compile Include="mycms_menu.cs" />
     <Compile Include="mycms_news.cs" />
     <Compile Include="mycms_pic.cs" />
     <Compile Include="mycms_power.cs" />
     <Compile Include="mycms_temptates.cs" />
     <Compile Include="mycms_user.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZLib\Zlib.csproj">
+      <Project>{5762bfb7-503d-4090-95c9-2c58ec2fdcd2}</Project>
+      <Name>Zlib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
