@@ -46,6 +46,7 @@
     <Compile Include="mycms_news.cs" />
     <Compile Include="mycms_pic.cs" />
     <Compile Include="mycms_power.cs" />
+    <Compile Include="mycms_temptates_public.cs" />
     <Compile Include="mycms_temptates.cs" />
     <Compile Include="mycms_user.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -39,11 +39,15 @@ namespace MyCms_BLL
         /// </summary>
         /// <param name="q"></param>
         /// <returns></returns>
-        public IList<mycms_temptates> GetNewsList(Query q)
+        public IList<mycms_temptates> GetTemptateList(Query q)
         {
-            return mtd.GetNewsList(q);
+            return mtd.GetTemptatesList(q);
         }
 
+        public IList<mycms_temptates> GetTemptateList(Query q, int pageindex, int pagesize, out int totalcount)
+        {
+            return mtd.GetTemptatesList(q,pageindex,pagesize,out totalcount);
+        }
         public mycms_temptates GetTemptatesByID(int temptatesid)
         {
             return mtd.GetTemptatesById(temptatesid);
@@ -51,24 +55,24 @@ namespace MyCms_BLL
 
 
     }
-    public class mycms_temptates_public_Manage
+    public class mycms_temptate_public_Manage
     {
-        mycms_temptates_public_DAL mtpd = new mycms_temptates_public_DAL();
+        mycms_temptate_public_DAL mtpd = new mycms_temptate_public_DAL();
 
         #region"增删改"
         public int GetMaxID()
         {
             return mtpd.GetMaxID();
         }
-        public int Insert(mycms_temptates_public m)
+        public int Insert(mycms_temptate_public m)
         {
             return mtpd.Insert(m);
         }
-        public int Update(mycms_temptates_public m)
+        public int Update(mycms_temptate_public m)
         {
             return mtpd.Update(m);
         }
-        public int Delete(mycms_temptates_public m)
+        public int Delete(mycms_temptate_public m)
         {
 
             return mtpd.Delete(m);
@@ -81,12 +85,15 @@ namespace MyCms_BLL
         /// </summary>
         /// <param name="q"></param>
         /// <returns></returns>
-        public IList<mycms_temptates_public> GetNewsList(Query q)
+        public IList<mycms_temptate_public> GetTemptatePublicList(Query q)
         {
-            return mtpd.GetNewsList(q);
+            return mtpd.GetTemptatesPublicList(q);
         }
-
-        public mycms_temptates_public GetTemptatesByID(int temptatesid)
+        public IList<mycms_temptate_public> GetTemptatePublicList(Query q, int pageindex, int pagesize, out int totalcount)
+        {
+            return mtpd.GetTemptatesPublicList(q,pageindex,pagesize,out totalcount);
+        }
+        public mycms_temptate_public GetTemptatesByID(int temptatesid)
         {
             return mtpd.GetTemptatesById(temptatesid);
         }
