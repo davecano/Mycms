@@ -9,8 +9,10 @@ using Z;
 
 namespace MyCms_BLL
 {
+
     public class mycms_temptates_Manage
     {
+       
         mycms_temptates_DAL mtd = new mycms_temptates_DAL();
 
         #region"增删改"

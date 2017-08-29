@@ -302,6 +302,17 @@ namespace Z
         /// <summary>
         /// 增加查询条件
         /// </summary>
+        /// <param name="key">查询字段（字段不带>= 或者 =）</param>
+        /// <param name="value">查询值</param>
+        /// <returns>查询结果</returns>
+        public Query Gt(string key, object value,bool noteq)
+        {
+
+            return Operate(">", key, value);
+        }
+        /// <summary>
+        /// 增加查询条件
+        /// </summary>
         /// <param name="key">查询字段（字段可带>= 或者 =）</param>
         /// <param name="value">查询值</param>
         /// <returns>查询结果</returns>

@@ -20,8 +20,8 @@ namespace MyCms_Model
 		private int _id;
 		private string _title;
         private string _picurl;
-   
-		private int? _newsid;
+        private int? _classid;
+        private int? _newsid;
         /// <summary>
         /// 
         /// </summary>
@@ -55,8 +55,13 @@ namespace MyCms_Model
 			set{ _newsid=value;}
 			get{return _newsid;}
 		}
-		#endregion Model
+        public int? ClassId
+        {
+            set { _classid = value; }
+            get { return _classid; }
+        }
+        #endregion Model
 
-	}
+    }
 }
 

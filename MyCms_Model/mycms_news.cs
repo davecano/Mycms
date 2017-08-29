@@ -16,8 +16,9 @@ namespace MyCms_Model
 	{
 		public mycms_news()
 		{}
-		#region Model
-		private int _id;
+        #region Model
+        private int _id;
+        private int? _index;
         private int _istop;
         private int _classid;
         private string _classname;
@@ -31,20 +32,27 @@ namespace MyCms_Model
         /// 
         /// </summary>
         [ColumnAttribute(PrimaryKey = true)]
+      
         public int Id
 		{
 			set{ _id=value;}
 			get{return _id;}
 		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public int ClassId
+        [Ignore]
+        public int? NewsIndex
+        {
+            set { _index = value; }
+            get { return _index; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int ClassId
 		{
 			set{ _classid=value;}
 			get{return _classid;}
 		}
-        public int Istop
+        public int IsTop
         {
             set { _istop = value; }
             get { return _istop; }

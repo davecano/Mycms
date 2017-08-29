@@ -10,15 +10,14 @@ using Z.Data;
 namespace MyCms_DAL
 {
    public class mycms_pic_DAL
-    {
- 
-
+   {
+       private string sql = "select p.*,q.ClassId from mycms_pic p left join mycms_news q on p.NewsId=q.Id  where 1=1 {0}";
         DbHelper db = new DbHelper();
         #region 查看所有模板
 
         public IList<mycms_pic> GetPicsList(Query q)
         {
-            return db.Query<mycms_pic>(q, 1, 1000);
+            return db.Query<mycms_pic>(string.Format(sql, q.GetCondition(true))); ;
         }
 
         #endregion

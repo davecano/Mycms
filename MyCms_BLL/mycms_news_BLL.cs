@@ -11,6 +11,17 @@ using Z;
 
 namespace MyCms_BLL
 {
+    //public struct News
+    //{
+    //    public int newsId;
+    //    public int classId;
+    //    public int index;
+    //};
+    //public static class SaveNewsId
+    //{
+
+    //    public static IList<int> newsid;
+    //}
     public class mycms_news_Manage
     {
         mycms_news_DAL mnd = new mycms_news_DAL();
@@ -40,6 +51,26 @@ namespace MyCms_BLL
         public IList<mycms_news> GetNewsList(Query q, int pageindex, int pagesize, out int totalcount)
         {
             return mnd.GetNewsList(q, pageindex, pagesize, out totalcount);
+        }
+        public IList<mycms_news> GetNewsList(Query q)
+        {
+            return mnd.GetNewsList(q);
+        }
+        public IList<mycms_news> GetNewsList(Query q1,Query q2)
+        {
+            return mnd.GetNewsList(q1,q2);
+        }
+        public IList<mycms_news> GetNewsList(string sql,Query q)
+        {
+            return mnd.GetNewsList(sql,q);
+        }
+        public IList<mycms_news> GetNewsList(string sql, Query q1,Query q2)
+        {
+            return mnd.GetNewsList(sql, q1,q2);
+        }
+        public int getcount(string sql, Query q)
+        {
+            return mnd.getcount(sql, q);
         }
 
         public mycms_news GetNewsByID(int newsid)
