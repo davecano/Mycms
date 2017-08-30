@@ -8,15 +8,16 @@
     <title>后台登录</title>
 
     <link href="mycss/style.css" rel="stylesheet"/>
-    <script src="myjs/jquery-3.2.1.js"></script>
-    <script src="myjs/layer.js"></script>
+    <script  type="text/javascript" src="myjs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/layer/layer.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
+        
             $("#LinkButton1").click(function() {
                 var res = true;
                 if ($.trim($("#txtUserName").val()) == "") {

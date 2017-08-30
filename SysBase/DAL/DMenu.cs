@@ -110,6 +110,13 @@ namespace SysBase.DAL
             else
                 return false;
         }
-
+        public int GetOperateID(int Menuid, string OperareName)
+        {
+            DataTable dt = db.ExecuteTable("select OperateID from SysOperate where Menuid=" + Menuid + "and OperateName='" + OperareName + "'");
+            if (dt.Rows.Count > 0)
+                return int.Parse(dt.Rows[0]["OperateID"].ToString());
+            else
+                return 0;
+        }
     }
 }

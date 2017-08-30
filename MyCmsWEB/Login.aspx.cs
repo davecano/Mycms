@@ -29,6 +29,9 @@ namespace MyCmsWEB
             //var mu = mcm.GetUserByUserName(PubCom.CheckString(txtUserName.Text.ToLower()));
      
            SysUser mu = bu.GetUserByUserLoginName(PubCom.CheckString(txtUserName.Text.ToLower()));
+
+            if (mu == null)
+                mu = bu.GetUserByTel(PubCom.CheckString(txtUserName.Text.ToString().ToLower()));
             if (mu == null)
             {
                 Message.ShowWrong(this, " 不存在此用户");
@@ -36,11 +39,15 @@ namespace MyCmsWEB
             }
 
             if (mu.UserPassword == Z.EncryptHelper.EncryptPassword(txtUserPwd.Text.Trim(), Constants.PassWordEncodeType))
-                if (PubCom.login(mu, PubCom.CheckString(txtUserName.Text.ToLower()), txtUserPwd.Text.Trim()))
+
+                if (mu.IsUse == true)
+                    if (PubCom.login(mu, PubCom.CheckString(txtUserName.Text.ToLower()), txtUserPwd.Text.Trim()))
                     Response.Redirect("~/Public/Index.aspx");
                      else
                     Message.ShowWrong(this, "用户名或密码错误");
-                    else
+                else
+                    Message.ShowWrong(this, "您的账号已经被禁用！请与super管理员联系！");
+             else
                         Message.ShowWrong(this, "用户名或密码错误");
 
         }

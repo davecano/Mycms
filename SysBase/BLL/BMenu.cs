@@ -80,6 +80,9 @@ namespace SysBase.BLL
         {
             return dop.IsHaveOperareName(Menuid, OperareName);
         }
-
+        public int GetOperateID(int Menuid, string OperareName)
+        {
+            return dop.GetOperateID(Menuid, OperareName);
+        }
     }
 }

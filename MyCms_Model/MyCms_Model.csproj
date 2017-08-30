@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="EnumHelper.cs" />
     <Compile Include="mycms_class.cs" />
-    <Compile Include="mycms_menu.cs" />
+    <Compile Include="mycms_site.cs" />
     <Compile Include="mycms_news.cs" />
     <Compile Include="mycms_pic.cs" />
     <Compile Include="mycms_power.cs" />

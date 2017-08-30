@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="mycms_class_DAL.cs" />
-    <Compile Include="mycms_menu_DAL .cs" />
+    <Compile Include="mycms_site_DAL .cs" />
     <Compile Include="mycms_news_DAL.cs" />
     <Compile Include="mycms_pic_DAL.cs" />
     <Compile Include="mycms_temptates_DAL.cs" />

@@ -11,20 +11,20 @@ using Z;
 
 namespace MyCms_BLL
 {
-    public class mycms_menu_Manage
+    public class mycms_site_Manage
     {
-        mycms_menu_DAL mnd = new mycms_menu_DAL();
+        mycms_site_DAL mnd = new mycms_site_DAL();
 
         #region"增删改"
-        public int Insert(mycms_menu m)
+        public int Insert(mycms_site m)
         {
             return mnd.Insert(m);
         }
-        public int Update(mycms_menu m)
+        public int Update(mycms_site m)
         {
             return mnd.Update(m);
         }
-        public int Delete(mycms_menu m)
+        public int Delete(mycms_site m)
         {
 
             return mnd.Delete(m);
@@ -37,14 +37,14 @@ namespace MyCms_BLL
         /// </summary>
         /// <param name="q"></param>
         /// <returns></returns>
-        public IList<mycms_menu> GetMenuList(Query q)
+        public IList<mycms_site> GetSiteList(Query q)
         {
-            return mnd.GetMenuList(q);
+            return mnd.GetSiteList(q);
         }
 
-        public mycms_menu GetMenuByID(int menuid)
+        public mycms_site GetSiteByID(int menuid)
         {
-            return mnd.GetMenuById(menuid);
+            return mnd.GetSiteById(menuid);
         }
 
 

@@ -71,9 +71,13 @@ namespace MyCms_TEngine
             int pageNum = 0;
             while (pageNum * pageSize < query.Count)
             {
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
                 //分页   
                 var newslist = query.Skip(pageNum * pageSize).Take(pageSize);
-
                 VH.Put("newslist", newslist);
                 string fenye = hp.GePageNavgation((pageNum + 1), pageCount, "_list.shtml");
                 VH.Put("num", fenye);
@@ -136,6 +140,11 @@ namespace MyCms_TEngine
             int pageNum = 0;
             while (pageNum * pageSize < query.Count)
             {
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
                 //分页   
                 var newslist = query.Skip(pageNum * pageSize).Take(pageSize);
 
@@ -200,6 +209,11 @@ namespace MyCms_TEngine
             int pageNum = 0;
             while (pageNum * pageSize < query.Count)
             {
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
                 //分页   
                 var newslist = query.Skip(pageNum * pageSize).Take(pageSize);
 
@@ -226,7 +240,7 @@ namespace MyCms_TEngine
             mycms_news_Manage mnm = new mycms_news_Manage();
             string tempath = HttpContext.Current.Server.MapPath(@"~/TemptatesFile");
             string shtmlpath = HttpContext.Current.Server.MapPath(@"~/");
-            NVelocityHelper VH = new NVelocityHelper(tempath);
+          
             Query qm = Query.Build(new { SortFields = "AddTime Desc,IsTop Desc" });
             qm.Add("ClassId",classId);
             var list = mnm.GetNewsList(qm);//得到相关栏目下的newlist全部生成了
@@ -241,6 +255,12 @@ namespace MyCms_TEngine
 
             for (int j = 0; j < list.Count; j++)
             {
+                NVelocityHelper VH = new NVelocityHelper(tempath);
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
 
                 VH.Put("LTitle", j == 0 ? "没有了" : "<a href ='" + a[j - 1].Id + "_news.shtml'>" + a[j - 1].Title + "</a>");
                 VH.Put("RTitle", j == list.Count - 1 ? "没有了" : "<a href ='" + a[j + 1].Id + "_news.shtml'>" + a[j + 1].Title + "</a>");
@@ -266,7 +286,7 @@ namespace MyCms_TEngine
             mycms_news_Manage mnm = new mycms_news_Manage();
             string tempath = HttpContext.Current.Server.MapPath(@"~/TemptatesFile");
             string shtmlpath = HttpContext.Current.Server.MapPath(@"~/");
-            NVelocityHelper VH = new NVelocityHelper(tempath);
+           
             var rnewscount = (index+1) * pageSize;
             var lnewscount = (index-2) * pageSize;
             Query q1 = Query.Build(new { SortFields = "AddTime Desc,IsTop Desc" });
@@ -288,6 +308,12 @@ namespace MyCms_TEngine
 
             for (int j = 0; j < list.Count; j++)
             {
+                NVelocityHelper VH = new NVelocityHelper(tempath);
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
 
                 VH.Put("LTitle", j == 0 ? "没有了" : "<a href ='" + a[j - 1].Id + "_news.shtml'>" + a[j - 1].Title + "</a>");
                 VH.Put("RTitle", j == list.Count - 1 ? "没有了" : "<a href ='" + a[j + 1].Id + "_news.shtml'>" + a[j + 1].Title + "</a>");
@@ -313,7 +339,7 @@ namespace MyCms_TEngine
             mycms_news_Manage mnm = new mycms_news_Manage();
             string tempath = HttpContext.Current.Server.MapPath(@"~/TemptatesFile");
             string shtmlpath = HttpContext.Current.Server.MapPath(@"~/");
-            NVelocityHelper VH = new NVelocityHelper(tempath);
+          
             var newscount = index * pageSize;
             Query q1 = Query.Build(new { SortFields = "AddTime Desc,IsTop Desc" });
             Query q2 = Query.Build(new { SortFields = "AddTime Desc,IsTop Desc" });
@@ -333,7 +359,12 @@ namespace MyCms_TEngine
 
             for (int j = 0; j < list.Count; j++)
             {
-
+                NVelocityHelper VH = new NVelocityHelper(tempath);
+                mycms_site_Manage msm = new mycms_site_Manage();
+                var site = msm.GetSiteByID(1);
+                VH.Put("SiteTitle", site.SiteFullName);
+                VH.Put("SiteDescription", site.SiteDescription);
+                VH.Put("SiteKeywords", site.SiteKeyword);
                 VH.Put("LTitle", j == 0 ? "没有了" : "<a href ='" + a[j - 1].Id + "_news.shtml'>" + a[j - 1].Title + "</a>");
                 VH.Put("RTitle", j == list.Count - 1 ? "没有了" : "<a href ='" + a[j + 1].Id + "_news.shtml'>" + a[j + 1].Title + "</a>");
 
